@@ -1,7 +1,8 @@
-;(function ($) {
+renderTimer = function ($) {
 	$(document).ready(function () {
-		$('.flip-clock-container').addClass('show')
-		$('.flip-clock-container').each(function () {
+		const container = $('.flip-clock-container')
+		container.addClass('show')
+		container.each(function () {
 			var result = prepareFlipItems($(this))
 			var flipElements = result.flipElements
 			var timestamp = result.timestamp
@@ -86,6 +87,10 @@
 
 	function setState(flipElements, timestamp, flipContainer) {
 		var countDown = setInterval(function () {
+			if (!$('.flip-clock-container').children('li').length) {
+				flipContainer.trigger('done')
+				return clearInterval(countDown)
+			}
 			if (!timestamp || timestamp < 0) {
 				flipContainer.trigger('done')
 				return clearInterval(countDown)
@@ -240,4 +245,4 @@
 
 		return ' days'
 	}
-})(jQuery)
+}

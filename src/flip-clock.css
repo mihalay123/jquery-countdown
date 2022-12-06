@@ -119,6 +119,7 @@
 .flip-clock-container [class|="flip-item"] .flip-digit > span::before {
   top: 0;
   line-height: 47px;
+  font-weight: 600;
   border-radius: 11px 11px 0 0;
   border-bottom: 0.75px solid var(--flip-border-color);
   -webkit-transform-origin: bottom;
@@ -128,6 +129,7 @@
 .flip-clock-container [class|="flip-item"] .flip-digit > span::after {
   bottom: 0;
   line-height: 0px;
+  font-weight: 600;
   border-radius: 0 0 11px 11px;
   border-top: 0.75px solid var(--flip-border-color);
   -webkit-transform-origin: top;
@@ -178,18 +180,30 @@
   }
 
   .flip-clock-container [class|="flip-item"]::before {
-    font-size: 40px;
-    margin: 0 -20px;
-    top: -3px;
-  }
+    font-size: 30px;
+    margin: 0 -19px;
+    top: 0px;
+  } 
 
-  flip-clock-container [class|="flip-item"] .flip-digit {
+  .flip-clock-container [class|="flip-item"] .flip-digit {
     width: 29px;
     height: 40px;
+    border-radius: 8px;
   }
 
   .flip-clock-container [class|="flip-item"] .flip-digit > span::after, .flip-clock-container [class|="flip-item"] .flip-digit > span::before {
     font-size: 18px;
+  }
+
+  .flip-clock-container [class|="flip-item"] .flip-digit > span::before {
+    line-height: 39px;
+    border-radius: 7px 7px 0 0;
+    border-width: 0.5px;
+  }
+
+  .flip-clock-container [class|="flip-item"] .flip-digit > span::after {
+    border-radius: 0 0 7px 7px;
+    border-width: 0.5px;
   }
 
 }
