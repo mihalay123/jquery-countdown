@@ -2,7 +2,7 @@
   width: 448px;
   height: 48px;
   direction: ltr;
-  font-family: Arial;
+  font-family: 'Inter';
   padding: 0;
   margin: 0;
   list-style: none;
@@ -67,16 +67,6 @@
 }
 
 .flip-clock-container [class|="flip-item"]::before {
-  content: ":";
-  font-family: Consolas;
-  font-size: 40px;
-  color: var(--flip-dots-color);
-  margin: 0 -25px;
-  position: absolute;
-  top: -3px;
-}
-
-.flip-clock-container .separator {
   content: ":";
   font-family: Consolas;
   font-size: 40px;
@@ -175,6 +165,35 @@
   -webkit-animation: currentDownShadowAnim 0.9s linear forwards;
           animation: currentDownShadowAnim 0.9s linear forwards;
 }
+
+@media screen and (max-width: 600px) {
+  .flip-clock-container {
+    width: 343px;
+    height: 40px;
+    gap: 28px;
+  }
+
+  .flip-clock-container .flip-item-days .flip-digit {
+    width: 73px !important;
+  }
+
+  .flip-clock-container [class|="flip-item"]::before {
+    font-size: 40px;
+    margin: 0 -20px;
+    top: -3px;
+  }
+
+  flip-clock-container [class|="flip-item"] .flip-digit {
+    width: 29px;
+    height: 40px;
+  }
+
+  .flip-clock-container [class|="flip-item"] .flip-digit > span::after, .flip-clock-container [class|="flip-item"] .flip-digit > span::before {
+    font-size: 18px;
+  }
+
+}
+
 
 @-webkit-keyframes afterZIndexAnim {
   0% {

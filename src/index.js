@@ -52,6 +52,6 @@ function initTimer(endDate) {
 	})
 }
 
-const endDate = Date.UTC(2022, 11, 6, 12, 43, 40)
+const endDate = Date.UTC(2022, 11, 6, 15, 43, 40)
 
 initTimer(endDate)
