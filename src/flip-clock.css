@@ -118,10 +118,9 @@
 
 .flip-clock-container [class|="flip-item"] .flip-digit > span::before {
   top: 0;
-  line-height: 47px;
+  line-height: 46px;
   font-weight: 600;
   border-radius: 11px 11px 0 0;
-  border-bottom: 0.75px solid var(--flip-border-color);
   -webkit-transform-origin: bottom;
   transform-origin: bottom;
 }
@@ -131,7 +130,6 @@
   line-height: 0px;
   font-weight: 600;
   border-radius: 0 0 11px 11px;
-  border-top: 0.75px solid var(--flip-border-color);
   -webkit-transform-origin: top;
   transform-origin: top;
 }
@@ -196,7 +194,7 @@
   }
 
   .flip-clock-container [class|="flip-item"] .flip-digit > span::before {
-    line-height: 39px;
+    line-height: 38px;
     border-radius: 7px 7px 0 0;
     border-width: 0.5px;
   }
