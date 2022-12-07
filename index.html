@@ -5,13 +5,122 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./src/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <div class="container">
-      <div id="busyEndTimeRow" class="row">
-        <div id="busyEndDate" class="strong">
-          <ul class="flip-clock-container" id="flip-clock-container" data-end-date="December 12, 2022 00:00:00"></ul>
+      <div id="about" class="about">
+        <div class="block">
+          <h1>What is TON Domains?</h1>
+          <p>TON DNS is a service that allows users to assign a human-readable name to crypto wallets, smart contracts, and websites. With TON DNS, access to decentralized services is analogous to access to websites on the internet.</p>
+          <div class="image-container">
+            <div class="image">
+              <img src="./assets/duck.png" alt="domains">
+            </div>
+          </div>  
+        </div>
+
+        <div class="block">
+          <h2>Your nickname on a decentralized network</h2>
+          <p>You can create an account on social media and some messenger apps by registering a username, enabling others to find you more easily.</p>
+          <p>Now you can register a domain name on the TON blockchain and assign it to your crypto wallet. This domain name will be your nickname on The Open Network.</p>
+          <div class="video-section">
+            <div class="card-container">
+              <div class="video-container">
+                  <video class="video" muted="muted" loop="loop" preload="auto" autoplay="autoplay">
+                    <source src="./assets/video-example1.mp4" type="video/mp4">
+                  </video>
+              </div>
+              <span class="description">Enter the domain name instead of the recipient’s wallet address when sending tokens.</span>
+            </div>
+            <div class="card-container">
+              <div class="video-container">
+                  <video class="video" muted="muted" loop="loop" preload="auto" autoplay="autoplay">
+                    <source src="./assets/video-example2.mp4" type="video/mp4">
+                  </video>
+              </div>
+              <span class="description">Enter the domain name in the search field of a TON explorer.</span>
+            </div>
+          </div>
+          <p>The <a href="https://tonkeeper.com/" target="_blank">Tonkeeper</a>, <a href="https://wallet.ton.org/" target="_blank">TON Web Wallet</a>, and <a href="https://tonscan.org/" target="_blank">Toncan</a> services have already integrated support for TON DNS. Most other TON-based apps also plan to implement support so that nicknames (domain names) can be used across the entirety of the TON ecosystem.</p>
+          <p>In addition to users registering domain names, developers can also register domain names for the smart contracts of their decentralized services. Now, smart contracts will also have their own nicknames, just like bots in messenger apps.</p>
+        </div>
+
+        <div class="block">
+          <h2>A simple and convenient blockchain</h2>
+          <p>In previous <a href="https://t.me/tonblockchain/73">articles</a>, we established that we’d concentrate our efforts on making our apps and services as simple as possible.</p>
+          <p>TON has made it its mission to attain mass adoption to the point where even complete beginners will be able to reap the benefits of the network and the security provided by decentralized technologies.</p>
+          <p>TON developers have recently increased their output to achieve this goal. For example, the <a href="https://t.me/toncoin/400">latest update</a> of the <a href="https://t.me/wallet">@wallet</a> Telegram bot allows users to send Toncoin to other users directly within chats in the messenger, and the <a href="https://t.me/toncoin/441">NFT integration</a> in Tonkeeper has set a new standard for crypto wallets.</p>
+          <p>We’ve emphasized avoiding technical jargon and information in TON-based apps — we won’t inundate you with block numbers and transaction hashes.</p>
+          <p>The only technical detail immediately visible to the user is the wallet’s address. And although it’s simpler than a telephone or bank card number, we’re excited to know that the launch of TON DNS will simplify this process even more.</p>
+        </div>
+
+        <div class="block">
+          <h2>But we’re taking a step even closer toward a fully decentralized internet</h2>
+          <p>In Q3 2022, TON Sites and TON Proxy are slated to <a href="https://ton.org/roadmap">launch</a>.</p>
+          <p class="note">This decentralized technology provides more privacy and security to both the users and website owners.</p>
+          <p>Besides these releases, there will also be tools to facilitate the interaction between blockchain smart contracts and internet resources and vice versa.</p>
+          <p>Although you can assign a wallet address to a TON DNS, you’ll also be able to assign TON site.</p>
+          <p>What we see in TON DNS is a welcome alternative to centralized domain registries, which can often block your site’s domain either for arbitrary reasons or erroneously.</p>
+        </div>
+
+        <div class="block">
+          <h2>.ton domain names are NFTs</h2>
+          <p>The domain zone for TON DNS is called “.ton”. Users will register their domain name like this: “alice.ton”, “.ton” domain names are NFTs.</p>
+          <p class="note">That means that once you obtain a domain name, you’ll be able to store, gift, or sell it — the same way you’d handle regular NFTs.</p>
+          <p>Your domain will be stored in your wallet, and you’ll be able to put it up for sale on NFT marketplaces, such as <a href="https://getgems.io/">Getgems</a> or <a href="https://beta.disintar.io/">Disintar</a>, which already support TON DNS.</p>
+          <div class="image-container">
+            <div class="image">
+              <img src="./assets/interface.png" alt="getgems-interface">
+            </div>
+            <span class="description">Domain names for sale on NFT marketplace Getgems.</span>
+          </div>
+        </div>
+
+        <div class="block">
+          <h2>Rules for .ton domain names</h2>
+          <p>The “.ton” domain name must be at least 4 characters and no more than 126 characters. Registering a domain name with fewer than 4 characters is unavailable 
+            to avoid confusion with well-known internet domain names, such as “com”, “org”, “gov”, etc.</p>
+          <p>The domain must contain English letters, digits, and hyphen.</p>
+          <p class="note">However, technically, a domain name could depict an emoji, but they’re unavailable because a lot of them look the same — e.g., 😗 and 😙 — which scammers would use to trick unsuspecting users easily.</p>
+          <p>Once per year, the domain’s owner will have to send a nanoton to the domain’s smart contract to extend the domain for a year. If the owner fails to extend their domain, it will go up for auction. Such is to prevent losing a domain forever in the event its owner loses access.</p>
+        </div>
+
+        <div class="block">
+          <h2>Decentralization</h2>
+          <p>TON DNS is a decentralized domain name system. There is no “administrator” who can block your domain name.</p>
+          <p>For exceptional cases, it is possible to change the owner or delete the domain by means of network-wide voting. Note that most of the network can change not only DNS, but also any configuration of the blockchain, but since there are several hundred independent validators on the network, then such changes need an exceptionally good reason.</p>
+        </div>
+
+        <div class="block">
+          <h2>Auction rules</h2>
+          <p>The auction rules may be slightly changed by the start time.</p>
+          <ul>
+            <li>The domain auction will last one week. In the future, the auction period may be shortened to make the process more convenient for all users.</li>
+            <li>All users will be able to place bids in Toncoin to win a domain name.</li>
+            <li>If a bid is placed with less than an hour left in the auction, it will be prolongated by one hour to allow other users to place counterbids.</li>
+            <li>Every new bid must be at least 5% higher than the previous.</li>
+            <li>When the auction closes, the user who placed the highest bid will collect their domain name.</li>
+          </ul>
+
+        </div>
+
+        <div class="block">
+          <h2>Developers</h2>
+          <p>Each domain can store up to 2^256 DNS records where you can store not only your wallet addresses and websites but anything you want also.</p>
+          <p>You can use this in your products.</p>
+          <p class="note">A domain can be assigned an arbitrary smart contract responsible for the management of subdomains. It can implement any functionality that can be used to create new mechanics.</p>
+          <p>We welcome the writing of auxiliary services that could simplify user participation in auctions; for example, so that users do not have to wake up early in the morning if the auction is held at an inconvenient time. Also, services could collect a small commission fee in Toncoin for their work.</p>
+          <a class="button" href="">
+            Documentation 
+            <!-- <span class="arrow">></span> -->
+            <svg class="arrow" width="9" height="13" viewBox="0 0 9 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="m2 11 5-4.5L2 2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
         </div>
       </div>
     </div>  
