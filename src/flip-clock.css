@@ -13,12 +13,13 @@
   --flip-text-color: rgba(4, 6, 11, 1); 
   --flip-dots-color: rgba(192, 209, 217, 1);
   --flip-border-color: rgba(221, 227, 230, 0.9);
+  --flip-shadow-color: #D6DFE9;
   /* Темная тема */
   /* --flip-bg-color: rgba(45, 45, 50, 1);
   --flip-text-color: rgba(243, 243, 246, 1);
   --flip-dots-color: rgba(69, 69, 75, 1);
-  --flip-border-color: rgba(35, 35, 40, 0.9); */
-  --flip-shadow-color: rgba(0, 0, 0, 0.1);
+  --flip-border-color: rgba(35, 35, 40, 0.9);
+  --flip-shadow-color: #1F1F23; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
